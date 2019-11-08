@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+			<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+			<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+			<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+			<link rel="stylesheet" type="text/css" href="css/basic.css">
+			<script type="text/javascript" src="js/base.js"></script>
+
+</head>
+<body>
+	<section id="page" data-role="page">
+		<div data-role="panel" id="mypanel">
+			<h1>RentalZ</h1>
+        <ul data-inset="true" data-role="listview" >
+            <li data-role="list-divider">Property</li>
+            <li data-icon="plus"><a href="CW2.html" data-ajax="false" rel="external">Add</a></li>
+            <li data-icon="grid"><a href="home.html" data-ajax="false" rel="external">Load</a></li>
+        </ul>
+			</ul>
+
+			
+		</div>
+		<header data-role="header">
+			<a href="#" class="ui-btn-left" data-icon="bars" id="option">Menu</a>
+			<h1>EDIT PROPERTY</h1>
+			<a href="#" class="ui-btn-right" data-icon="heart" id="exit">Exit</a>
+		</header><!-- /header -->
+		<article role="main" class="ui-content">
+			
+				<div class="center">
+				
+					<label for="propertytype" required>PROPERTY TYPE<red style="color: red">*</red></label>
+					<input type="text" name="propertytype" id="propertytype" placeholder="House, Flat, Apartment, Bungalow, etc." pattern="^[a-zA-Z]+$"  data-required="true" data-clear-btn="true" required/>
+				
+				
+					<label for="bedroom">BEDROOMS<red style="color: red">*</red></label>
+					<input type="text" name="bedroom" id="bedroom" placeholder="studio, one, two" data-clear-btn="true" required/>
+				
+					<label for="adate">ADDED DATE<red style="color: red">*</red></label>
+					<input type="date" name="adate" id="adate" data-date-format='dd/mm/yyyy' placeholder="dd/mm/yyyy" data-clear-btn="true" required/>
+				
+					<label for="furniturestype">FURNITURES TYPE</label>
+					<!-- <input type="text" name="furniturestype" id="furniturestype" value="Fully furnished, Partly Furnished, Unfurnished" /> -->
+					<select name="furniturestype" id="furniturestype">
+					  <option value="Unfurnished" id="Unfurnished" name="Unfurnished">Unfurnished</option>
+					  <option value="Partly Furnished" id="Partly" name="Partly">Partly Furnished</option>
+					  <option value="Fully Furnished" id="Fully" name="Fully">Fully Furnished</option>
+					  
+					</select>
+				
+					<label for="rprice">RENT PRICE(MONTHLY)<red style="color: red">*</red></label>
+					<input type="number" min="1" name="rprice" id="rprice" class="number" value="1"  data-clear-btn="true" required/>
+				
+					<label for="notes">NOTES</label>
+					<input type="text" name="notes" id="notes" placeholder="Additional information about the property." />
+				
+					<label for="reportername">NAME OF REPORTER<red style="color: red">*</red></label>
+					<input type="text" name="reportername" id="reportername" placeholder="Name of The Reporter" pattern="^[A-Za-z]+\s[A-Za-z]+$" data-clear-btn="true" required/>
+					
+					
+					<a href="#" class="ui-btn" name="submit2s" id="submit2">Submit</a>
+				</div>
+		</article><!-- /content -->
+		<footer data-role="footer">
+			<h1>Bazinga</h1>
+		</footer><!-- /footer -->
+	</section><!-- /page -->
+</body>
+<script type="text/javascript" src="js/edit.js"></script>
+</html>
